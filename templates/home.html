@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+  </head>
+  <body>
+    <h1>Used Car Price Prediction</h1>
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+      <input
+        type="text"
+        name="make_year"
+        placeholder="Make Year"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="mileage_kmpl"
+        placeholder="Mileage in KM per Litre"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="engine_cc"
+        placeholder="Engine CC"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="fuel_type"
+        placeholder="Type of Fuel"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="owner_count"
+        placeholder="Number of Owners"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="brand"
+        placeholder="Brand"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="transmission"
+        placeholder="Transmission"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="service_history"
+        placeholder="Service History"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="accidents_reported"
+        placeholder="Reported
+      Accidents"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="insurance_valid"
+        placeholder="Insurance Valid"
+        required="required"
+      /><br />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">
+        Predict
+      </button>
+    </form>
+
+    <h2>The price prediction is {{result}}</h2>
+  </body>
+</html>
